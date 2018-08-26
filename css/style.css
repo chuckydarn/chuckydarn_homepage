@@ -1,0 +1,160 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/bold-webfont.woff2') format('woff2'),
+         url('fonts/bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/medium-webfont.woff2') format('woff2'),
+         url('fonts/medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url('fonts/regular-webfont.woff2') format('woff2'),
+         url('fonts/regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* BODY */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #7B00FF;
+  color: rgba(255, 255, 255);
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+  display: flex;
+  width: 88.5vw;
+  margin: auto;
+  flex-direction: column;
+  padding-top: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#emoji-girl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-out;
+}
+
+#emoji-girl.isVisible {
+  transform: translateY(0);
+}
+
+h1 {
+  font-weight: 900;
+  width: 100%;
+  flex-grow: 1;
+  font-size: 7.2vw;
+  line-height: 1.27;
+
+  transform: translateY(-100%);
+	transition: all 1s ease-in;
+}
+
+h1.show {
+  transform: translateY(0);
+}
+
+#span-one {
+  color: rgba(255, 255, 255, 1);
+}
+
+#span-two {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#span-three {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* BOTTOM BAR */
+
+.bottom-bar {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.bottom-bar ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255);
+  display: inline-block;
+}
+
+.email {
+  padding-bottom: 3px;
+}
+
+.email::before {
+  display: inline-block;
+  content: '';
+  height: 2px;
+  width: 24px;
+  background-color: #00FFC0;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.github_link {
+  visibility: hidden;
+  color: #00ffc0;
+  font-size: 12px;
+  padding-bottom: 4px;
+}
+
+.project_list_item:hover .github_link {
+  visibility: visible;
+}
+
+.project::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00FFC0;
+    transition: width .5s ease-out;
+}
+
+.project_list_item:hover .project::after {
+    width: 100%;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1100px) {
+  h1 {
+    font-size: 80px;
+  }
+}
