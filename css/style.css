@@ -159,7 +159,7 @@ li {
     width: 100%;
 }
 
-/* ABOUT */
+/* ABOUT PAGE */
 
 nav {
   padding-top: 25px;
@@ -172,7 +172,6 @@ nav {
 }
 
 .about {
-  /* background-color: rgba(215, 179, 255, 1); */
   min-height: 100vh;
 }
 
