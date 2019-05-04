@@ -164,11 +164,16 @@ li {
 nav {
   padding-top: 25px;
   padding-left: 50px;
-
+  transform: translateY(-100%);
+	transition: all 1s ease-in;
 }
 
 .home-link {
   color: #7B00FF;
+}
+
+nav.drop {
+  transform: translateY(0);
 }
 
 .about {
@@ -184,6 +189,12 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 75px;
+  transform: translateX(-150%);
+	transition: all 2s ease-in;
+}
+
+.about-content.appear {
+  transform: translateX(0);
 }
 
 .about-container img {
